@@ -12,6 +12,8 @@ jobs:
         java: [ 23 ]
     name: Java ${{ matrix.java }}
     steps:
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4.3.0
       - uses: actions/checkout@v2
       - name: setup
         uses: actions/setup-java@v1
